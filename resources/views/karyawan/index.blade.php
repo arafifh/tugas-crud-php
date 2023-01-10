@@ -1,4 +1,4 @@
-@extends('karyawan.index')
+@extends('layout.layout')
 
 @section('content')
     <div class="container">
@@ -33,6 +33,8 @@
                 <th>Since</th>
                 <th class="text-right">Actions</th>
             </tr>
+        </thead>
+        <tbody>
             @foreach($data as $key => $value)
                 <tr>
                     <td>{{ $value->name }}</td>
@@ -43,6 +45,8 @@
                     <td>{{ $value->join_date }}</td>
                 </tr>
             @endforeach
-        </thead>
+
+        </tbody>
     </table>
+
 @endsection

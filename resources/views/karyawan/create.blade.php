@@ -1,6 +1,4 @@
-@extends('karyawan.index')
 
-@section('content')
 <div class="container mt-2 pb-4" style="border-style: solid; border-radius: 6px;">
       <div class="row">
         <div class="col" >
@@ -97,4 +95,3 @@
         </div>
       </div>
     </div>
-@endsection
