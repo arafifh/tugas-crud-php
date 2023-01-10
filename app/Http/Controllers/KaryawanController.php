@@ -28,9 +28,9 @@ class KaryawanController extends Controller
      */
     public function create()
     {
-        $model = Karyawan::all();
+        $data = new Karyawan;
 
-        return view('karyawan.create', compact('model'));
+        return view('karyawan.create', compact('data'));
     }
 
     /**
@@ -41,7 +41,17 @@ class KaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Karyawan;
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->address = $request->address;
+        $data->job_position = $request->job_position;
+        $data->gender = $request->gender;
+        $data->join_date = $request->join_date;
+        $data->save();
+
+        return redirect('karyawan');
     }
 
     /**
@@ -52,7 +62,7 @@ class KaryawanController extends Controller
      */
     public function show(Karyawan $karyawan)
     {
-        //
+        
     }
 
     /**
@@ -61,9 +71,11 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Karyawan $karyawan)
+    public function edit($id)
     {
-        //
+        $data = Karyawan::find($id);
+
+        return view('karyawan.edit', compact('data'));
     }
 
     /**
@@ -73,9 +85,19 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Karyawan $karyawan)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Karyawan::find($id);
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->address = $request->address;
+        $data->job_position = $request->job_position;
+        $data->gender = $request->gender;
+        $data->join_date = $request->join_date;
+        $data->save();
+
+        return redirect('karyawan');
     }
 
     /**
@@ -84,8 +106,11 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Karyawan $karyawan)
+    public function destroy($id)
     {
-        //
+        $data = Karyawan::find($id);
+        $data->delete();
+
+        return redirect('karyawan');
     }
 }
