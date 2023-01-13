@@ -51,32 +51,32 @@
         <div class="col">
           <label for="Job">Job Position</label>
           <select name="position" id="position" class="form-control">
-            <option value="">Golongan IA</option>
-            <option value="">Golongan IB</option>
-            <option value="">Golongan IC</option>
-            <option value="">Golongan ID</option>
-            <option value="">Golongan IIA</option>
-            <option value="">Golongan IIB</option>
-            <option value="">Golongan IIC</option>
-            <option value="">Golongan IID</option>
-            <option value="">Golongan IIIA</option>
-            <option value="">Golongan IIIB</option>
-            <option value="">Golongan IIIC</option>
-            <option value="">Golongan IIID</option>
-            <option value="">Golongan IVA</option>
-            <option value="">Golongan IVB</option>
-            <option value="">Golongan IVC</option>
-            <option value="">Golongan IVD</option>
-            <option value="">Golongan IVE</option>
+            <option value="Golongan IA">Golongan IA</option>
+            <option value="Golongan IB">Golongan IB</option>
+            <option value="Golongan IC">Golongan IC</option>
+            <option value="Golongan ID">Golongan ID</option>
+            <option value="Golongan IIA">Golongan IIA</option>
+            <option value="Golongan IIB">Golongan IIB</option>
+            <option value="Golongan IIC">Golongan IIC</option>
+            <option value="Golongan IID">Golongan IID</option>
+            <option value="Golongan IIIA">Golongan IIIA</option>
+            <option value="Golongan IIIB">Golongan IIIB</option>
+            <option value="Golongan IIIC">Golongan IIIC</option>
+            <option value="Golongan IIID">Golongan IIID</option>
+            <option value="Golongan IVA">Golongan IVA</option>
+            <option value="Golongan IVB">Golongan IVB</option>
+            <option value="Golongan IVC">Golongan IVC</option>
+            <option value="Golongan IVD">Golongan IVD</option>
+            <option value="Golongan IVE">Golongan IVE</option>
           </select>
         </div>
         <div class="col">
           <label for="Gender">Gender</label>
           <div class="form-group">
             <select name="gender" id="gender" class="form-control">
-              <option value="">Male</option>
-              <option value="">Female</option>
-              <option value="">Other</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
             </select>
           </div>
         </div>

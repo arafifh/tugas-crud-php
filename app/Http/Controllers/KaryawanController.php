@@ -60,9 +60,11 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function show(Karyawan $karyawan)
+    public function show()
     {
-        
+        $data = Karyawan::paginate(25);
+
+        return view('karyawan', compact('data'));
     }
 
     /**
