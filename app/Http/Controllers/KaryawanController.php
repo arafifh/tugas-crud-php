@@ -49,6 +49,8 @@ class KaryawanController extends Controller
         $data->job_position = $request->job_position;
         $data->gender = $request->gender;
         $data->join_date = $request->join_date;
+
+
         $data->save();
 
         return redirect('karyawan');
