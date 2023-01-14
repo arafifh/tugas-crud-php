@@ -24,14 +24,14 @@
     <table class="table">
         <thead>
             <tr>
-                <!-- <th class="text-center">#</th> -->
                 <th>Name</th>
                 <th>Job Position</th>
                 <th>Email</th>
                 <th>Address</th>
                 <th>Gender</th>
                 <th>Since</th>
-                <th class="text-right">Actions</th>
+                <th class="text-right" >Actions</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -44,14 +44,15 @@
                     <td>{{ $value->gender }}</td>
                     <td>{{ $value->join_date }}</td>
                     <td>
+                        <a href="{{ url('karyawan/edit', [$value->id]) }}" class="btn btn-xs btn-primary">edit</a>
+                    </td>
+                    <td>
                         <form action="{{ url('karyawan/delete', [$value->id]) }}" method="POST">
                             @method('DELETE')
                             @csrf
                             <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                         </form>
-                        <a href="{{ url('karyawan/edit', [$value->id]) }}" class="btn btn-xs btn-primary">edit</a>
                     </td>
-                    
                 </tr>
             @endforeach
 
