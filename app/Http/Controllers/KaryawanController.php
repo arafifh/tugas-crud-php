@@ -12,7 +12,7 @@ class KaryawanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() // fungsi untuk mengarahkan ke halaman index
     {
        
         $data = Karyawan::all();
@@ -26,7 +26,7 @@ class KaryawanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() // fungsi untuk membuat row baru di database
     {
         $data = new Karyawan;
 
@@ -39,7 +39,7 @@ class KaryawanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // fungsi untuk menyimpan data yang diisi di form
     {
         $data = new Karyawan;
 
@@ -62,7 +62,7 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show() // fungsi untuk menampilkan semua data di tabel karyawan
     {
         $data = Karyawan::paginate(25);
 
@@ -75,7 +75,7 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id) // fungsi untuk menampilkan data yg dipencet dan editable
     {
         $data = Karyawan::find($id);
 
@@ -89,7 +89,7 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) // sama dengan fungsi store tapi ini tidak membuat row baru tetapi mengubah data saja jadi tidak membuat data baru
     {
         $data = Karyawan::find($id);
 
@@ -110,7 +110,7 @@ class KaryawanController extends Controller
      * @param  \App\Models\Karyawan  $karyawan
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id) // fungsi untuk menghapus row data
     {
         $data = Karyawan::find($id);
         $data->delete();

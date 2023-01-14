@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/karyawan', [KaryawanController::class, 'index']);
-Route::get('/karyawan/create', [KaryawanController::class, 'create']);
-Route::post('/karyawan', [KaryawanController::class, 'store']);
-Route::delete('/karyawan/delete/{id}', [KaryawanController::class, 'destroy']);
+Route::get('/karyawan', [KaryawanController::class, 'index']); // mengarahkan ke halaman index
+Route::get('/karyawan/create', [KaryawanController::class, 'create']);  // url untuk menginitialize row baru
+Route::post('/karyawan', [KaryawanController::class, 'store']); // url untuk store data
+Route::delete('/karyawan/delete/{id}', [KaryawanController::class, 'destroy']); // url untuk delete row data
 Auth::routes();
 
-Route::get('/home', [KaryawanController::class, 'index'])->name('home');
+Route::get('/home', [KaryawanController::class, 'index'])->name('home'); // url untuk redirect ke index

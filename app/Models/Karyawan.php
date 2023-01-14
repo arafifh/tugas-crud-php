@@ -9,6 +9,7 @@ class Karyawan extends Model
 {
     use HasFactory;
 
+    // kolom yg bisa diisi
     protected $fillable = [
         'name',
         'email',
