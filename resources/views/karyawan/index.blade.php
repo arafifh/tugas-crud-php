@@ -49,7 +49,7 @@
                             @csrf
                             <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                         </form>
-                        <a href="{{ url('karyawan/edit', [$value->id]) }}" class="btn btn-xs btn-primary">update</a>
+                        <a href="{{ url('karyawan/edit', [$value->id]) }}" class="btn btn-xs btn-primary">edit</a>
                     </td>
                     
                 </tr>

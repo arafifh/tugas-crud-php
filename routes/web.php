@@ -22,6 +22,7 @@ Route::get('/karyawan', [KaryawanController::class, 'index']); // mengarahkan ke
 Route::get('/karyawan/create', [KaryawanController::class, 'create']);  // url untuk menginitialize row baru
 Route::post('/karyawan', [KaryawanController::class, 'store']); // url untuk store data
 Route::delete('/karyawan/delete/{id}', [KaryawanController::class, 'destroy']); // url untuk delete row data
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
 Route::put('/karyawan/update/{id}', [KaryawanController::class, 'update']);
 Auth::routes();
 
