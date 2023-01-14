@@ -44,11 +44,12 @@
                     <td>{{ $value->gender }}</td>
                     <td>{{ $value->join_date }}</td>
                     <td>
-                        <form action="{{url('karyawan/delete', [$value->id])}}" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                        <form action="{{ url('karyawan/delete', [$value->id]) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                         </form>
+                        <a href="{{ url('karyawan/edit', [$value->id]) }}" class="btn btn-xs btn-primary">update</a>
                     </td>
                     
                 </tr>
