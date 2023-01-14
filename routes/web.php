@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/karyawan', [KaryawanController::class, 'index']);
 Route::get('/karyawan/create', [KaryawanController::class, 'create']);
 Route::post('/karyawan', [KaryawanController::class, 'store']);
+Route::delete('/karyawan/delete/{id}', [KaryawanController::class, 'destroy']);
+Auth::routes();
+
+Route::get('/home', [KaryawanController::class, 'index'])->name('home');

@@ -24,7 +24,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="text-center">#</th>
+                <!-- <th class="text-center">#</th> -->
                 <th>Name</th>
                 <th>Job Position</th>
                 <th>Email</th>
@@ -43,6 +43,14 @@
                     <td>{{ $value->address }}</td>
                     <td>{{ $value->gender }}</td>
                     <td>{{ $value->join_date }}</td>
+                    <td>
+                        <form action="{{url('karyawan/delete', [$value->id])}}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                        </form>
+                    </td>
+                    
                 </tr>
             @endforeach
 

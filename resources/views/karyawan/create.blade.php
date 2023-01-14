@@ -8,7 +8,7 @@
       <ol class="breadcrumb" style="background-color: white;">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item">
-          <a href="tbl_kar.html">Table Karyawan</a>
+          <button onclick="window.location.href='{{route('home')}}'" class="bg-transparent">Tabel Karyawan</button>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
           Insert Page
@@ -22,13 +22,13 @@
     </div>
   </div>
 
-  {{-- Cara untuk konect data ketika dikirim dengan controler --}}
+  {{-- Cara untuk coonect data ketika dikirim dengan controler --}}
   <form action="/karyawan" method="POST">
     @csrf
     <div class="row">
       <div class="col">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name"/>
       </div>
       <div class="col">
         <label for="email">Email</label>
@@ -37,7 +37,7 @@
     </div>
     <div class="col">
       <label for="address">Address</label>
-      <textarea name="address" id="address" cols="30" rows="10"></textarea>
+      <input name="address" id="address"/>
     </div>
     <div class="row mt-4">
       <div class="col">
